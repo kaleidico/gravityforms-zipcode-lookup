@@ -17,6 +17,8 @@ In Gravity Forms, there are a few necessary steps before applying any of the cod
  1. Locate the ID of the form and make note of that somewhere. This ID will replace the placeholder of [form-id] in the code.
  2. Create 3 hidden fields. city, longState and shortState and make note of each of those IDs as well. These IDs will replace [city-id], [shortState-id] and [longState-id] in the code.
  3. You will need an API Key provided by the client. In the documentation above, there is a Loom video that walks the user through on how to obtain an API key. This API key will replace [api-key] in the code.
+ 4. If the Gravity Form doesn't already have a zip code field for the user to type in their zip code, you'll need to add one as well and make note of that ID. This ID will replace the placeholder of [zipcode-id] in the code.
+ 5. Anywhere in the code that you see [form-name], you'll replace with your form name.
 
 
 ## Coding
