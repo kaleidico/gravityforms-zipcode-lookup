@@ -3,7 +3,7 @@ add_filter( 'gform_pre_submission_filter_[form-id]', 'populate_city_state_[form-
 
 function populate_city_state_[form-name]_form( $form ) {
 	
-	$response = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$_POST["[zipcode-id]"].'&sensor=true&key=[api-key]');
+	$response = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$_POST["input_[zipcode-id]"].'&sensor=true&key=[api-key]');
 	$response = json_decode($response);
 	
 
@@ -30,9 +30,9 @@ function populate_city_state_[form-name]_form( $form ) {
 	}
 	
 	
- 	$_POST["[city-id]"] = $city;
-	$_POST["[shortState-id]"] = $shortState;
- 	$_POST["[longState-id]"] = $longState;
+ 	$_POST["input_[city-id]"] = $city;
+	$_POST["input_[shortState-id]"] = $shortState;
+ 	$_POST["input_[longState-id]"] = $longState;
       
     return $form;
 }
